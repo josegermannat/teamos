@@ -35,6 +35,14 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.contenedor.aparecer {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .elemento {
@@ -45,23 +53,20 @@ button:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     pointer-events: none;
 }
-@media (min-width: 600px) {
-    .contenedor {
-        width: 150px;
-        height: 80px;
-    }
 
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 600px) {
+    button {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+    
+    .contenedor {
+        width: 100px;
+        height: 50px;
+    }
+    
     .elemento {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
-
-@media (min-width: 900px) {
-    .contenedor {
-        width: 180px;
-        height: 100px;
-    }
-
-    .elemento {
-        font-size: 28px;
-    }  }
