@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
         let zIndex = 1; // Iniciar el índice z
 
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 300; i++) {
             setTimeout(() => {
                 const contenedor = document.createElement("div");
                 contenedor.className = "contenedor";
